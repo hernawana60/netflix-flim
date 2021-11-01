@@ -23,6 +23,7 @@ Player.Video = function PlayerVideo({ src, ...restProps }) {
           <Inner>
             <iframe
               id="ytplayer"
+              allow="fullscreen"
               type="text/html"
               style={{ width: "100%", height: "100%" }}
               src={src}
