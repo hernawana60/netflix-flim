@@ -8,7 +8,7 @@ import { SelectProfileContainer } from "./profiles";
 import { FooterContainer } from "./footer";
 
 export function BrowseContainer({ slides }) {
-  const [category, setCategory] = useState("series");
+  const [category, setCategory] = useState("films");
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
@@ -49,16 +49,16 @@ export function BrowseContainer({ slides }) {
           <Header.Group>
             <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
             <Header.TextLink
-              active={category === "series" ? "true" : "false"}
-              onClick={() => setCategory("series")}
-            >
-              Series
-            </Header.TextLink>
-            <Header.TextLink
               active={category === "films" ? "true" : "false"}
               onClick={() => setCategory("films")}
             >
               Films
+            </Header.TextLink>
+            <Header.TextLink
+              active={category === "series" ? "true" : "false"}
+              onClick={() => setCategory("series")}
+            >
+              Series
             </Header.TextLink>
           </Header.Group>
           <Header.Group>
